@@ -5,4 +5,11 @@ module ReadFile
     file.close
     content
   end
+
+  def read_by_lines(filename)
+    file = open(filename)
+    content = file.readlines
+    file.close
+    content
+  end
 end
