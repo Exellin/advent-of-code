@@ -29,7 +29,7 @@ def decodeHalfway(input)
   # Only have to loop through half the array since the numbers are being compared halfway around
   # Multiply each matching character by 2 to compensate for not looping through its pair
   input.chars[0..input.length/2 - 1].each_with_index do |char, i|
-    sum += 2*char.to_i if char == input[i + input.length/2] 
+    sum += 2*char.to_i if char == input[i + input.length/2]
   end
   sum
 end
