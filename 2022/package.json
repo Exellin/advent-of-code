@@ -1,0 +1,22 @@
+{
+  "name": "advent-2022",
+  "version": "1.0.0",
+  "description": "Advent of code 2022",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Exellin/advent-of-code"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/Exellin/advent-of-code#readme",
+  "dependencies": {
+    "@types/node": "^18.11.10",
+    "typescript": "^4.9.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "ts-node": "^10.9.1"
+  }
+}
