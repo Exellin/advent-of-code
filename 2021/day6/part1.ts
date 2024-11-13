@@ -1,6 +1,6 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
-const data = fs.readFileSync('day6/input.txt').toString('utf-8').split('\n')[0];
+const data: string = readFileSync('day6/input.txt').toString('utf-8').split('\n')[0];
 const lanternFish = data.split(',').map((fish) => Number(fish));
 const days = 80;
 

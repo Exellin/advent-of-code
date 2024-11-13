@@ -1,7 +1,7 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
 // lots of room for improvement here, had to run this overnight
-const connections = fs.readFileSync('day12/input.txt').toString('utf-8').split('\n').filter((line) => line.length > 0);
+const connections: string[] = readFileSync('day12/input.txt').toString('utf-8').split('\n').filter((line: string) => line.length > 0);
 const uniqueRooms: string[] = [];
 const possiblePaths: string[][] = [];
 

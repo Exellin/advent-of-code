@@ -1,6 +1,6 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
-const data = fs.readFileSync('day3/input.txt').toString('utf-8').split('\n');
+const data: string[] = readFileSync('day3/input.txt').toString('utf-8').split('\n');
 let sum = 0;
 
 for (const backpack of data) {

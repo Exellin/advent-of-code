@@ -1,6 +1,6 @@
-import fs from 'fs';
+import { readFileSync, writeFile } from "node:fs";
 
-const data = fs.readFileSync('day13/input.txt').toString('utf-8').split('\n').filter((line) => line.length > 0);
+const data: string[] = readFileSync('day13/input.txt').toString('utf-8').split('\n').filter((line: string) => line.length > 0);
 const holes: {[key: string]: number}[] = data.filter((line) => !line.includes('fold')).map((coordinates) => {
   const [x, y] = coordinates.split(',');
   return {x: Number(x), y: Number(y)};
@@ -29,6 +29,6 @@ for (let y=0; y<=maxY; y++) {
   output.push(rowToDisplay);
 }
 
-fs.writeFile('day13/output.txt', output.join('\n'), function (err) {
+writeFile('day13/output.txt', output.join('\n'), function (err: string) {
   if (err) return console.log(err);
 });

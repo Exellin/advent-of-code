@@ -1,6 +1,6 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
-const data = fs.readFileSync('day13/input.txt').toString('utf-8').split('\n').filter((line) => line.length > 0);
+const data: string[] = readFileSync('day13/input.txt').toString('utf-8').split('\n').filter((line: string) => line.length > 0);
 const holes: {[key: string]: number}[] = data.filter((line) => !line.includes('fold')).map((coordinates) => {
   const [x, y] = coordinates.split(',');
   return {x: Number(x), y: Number(y)};

@@ -1,6 +1,6 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
-const data = fs.readFileSync('day1/input.txt').toString('utf-8').split('\n');
+const data: string[] = readFileSync('day1/input.txt').toString('utf-8').split('\n');
 let increases = 0;
 
 for (let i=1; i < data.length; i++) {

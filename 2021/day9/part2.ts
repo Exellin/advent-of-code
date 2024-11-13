@@ -1,4 +1,4 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
 class Point {
   visited: boolean;
@@ -71,7 +71,7 @@ class Point {
 }
 
 const MAX_HEIGHT = 9;
-const data = fs.readFileSync('day9/input.txt').toString('utf-8').split('\n');
+const data: string[] = readFileSync('day9/input.txt').toString('utf-8').split('\n');
 const heightMap: Point[][] = data.filter((line) => line.length > 0).map((value) => Array.from(value).map((value) => {
   return new Point({elevation: Number(value)});
 }));

@@ -1,6 +1,6 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
-const data = fs.readFileSync('day7/input.txt').toString('utf-8').split('\n')[0];
+const data: string = readFileSync('day7/input.txt').toString('utf-8').split('\n')[0];
 const crabPositions = data.split(',').map((position) => Number(position));
 
 const averageCrabPosition = crabPositions.reduce((total, crabPosition) => {

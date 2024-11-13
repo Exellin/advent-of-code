@@ -1,6 +1,6 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
-const data = fs.readFileSync('day10/input.txt').toString('utf-8').split('\n');
+const data: string[] = readFileSync('day10/input.txt').toString('utf-8').split('\n');
 const POINT_VALUE: {[key: string]: number} = {
  ')': 3,
  ']': 57,

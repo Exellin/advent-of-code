@@ -1,6 +1,6 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
-const data = fs.readFileSync('day9/input.txt').toString('utf-8').split('\n');
+const data: string[] = readFileSync('day9/input.txt').toString('utf-8').split('\n');
 const heightMap = data.filter((line) => line.length > 0).map((value) => Array.from(value).map((value) => Number(value)));
 let totalRisk = 0;
 

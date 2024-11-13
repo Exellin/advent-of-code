@@ -1,4 +1,4 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
 type Octopus = {
   energy: number,
@@ -7,7 +7,7 @@ type Octopus = {
   y: number
 }
 
-const data = fs.readFileSync('day11/input.txt').toString('utf-8').split('\n').filter((line) => line.length > 0);
+const data = readFileSync('day11/input.txt').toString('utf-8').split('\n').filter((line: string) => line.length > 0);
 const octopi: Octopus[] = [];
 const MAX_ENERGY = 9;
 let allFlashed = false;

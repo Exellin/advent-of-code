@@ -1,6 +1,6 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
-const data = fs.readFileSync('day8/input.txt').toString('utf-8').split('\n');
+const data: string[] = readFileSync('day8/input.txt').toString('utf-8').split('\n');
 
 const neededSegments = {
   1: 2,

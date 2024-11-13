@@ -1,4 +1,4 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
 const SHAPE_SCORES = {
   "rock": 1,
@@ -21,7 +21,7 @@ const GUIDE_MAP = {
 type Play = keyof typeof GUIDE_MAP
 type Shape = keyof typeof SHAPE_SCORES;
 
-const data = fs.readFileSync('day2/input.txt').toString('utf-8').split('\n');
+const data: string[] = readFileSync('day2/input.txt').toString('utf-8').split('\n');
 
 const findMatchResult = ((opponentPlay: Shape, myPlay: Shape) => {
   if (opponentPlay === myPlay) { return DRAW_POINTS; }

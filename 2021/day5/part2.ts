@@ -1,4 +1,4 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
 type GridPoint = {
   x: number,
@@ -7,7 +7,7 @@ type GridPoint = {
 }
 
 const grid: GridPoint[] = [];
-const data = fs.readFileSync('day5/input.txt').toString('utf-8').split('\n');
+const data: string[] = readFileSync('day5/input.txt').toString('utf-8').split('\n');
 const lines = data.map((textLine) => textLine.split(' -> '))
                           .map((coordinateArray) => coordinateArray
                             .map((coordinatePair) => coordinatePair.split(',')))

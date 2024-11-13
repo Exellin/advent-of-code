@@ -1,4 +1,4 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
 const SHAPE_SCORES = {
   "rock": 1,
@@ -25,7 +25,7 @@ type OpponentPlay = keyof typeof OPPONENT_GUIDE_MAP
 type MyPlay = keyof typeof MY_GUIDE_MAP;
 type Shape = keyof typeof SHAPE_SCORES;
 
-const data = fs.readFileSync('day2/input.txt').toString('utf-8').split('\n');
+const data: string[] = readFileSync('day2/input.txt').toString('utf-8').split('\n');
 
 const getShapeScore = (matchScore: number, opponentShape: Shape) => {
   let myShape = '';

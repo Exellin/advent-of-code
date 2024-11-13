@@ -1,6 +1,6 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
-const data = fs.readFileSync('day1/input.txt').toString('utf-8').split('\n');
+const data: string[] = readFileSync('day1/input.txt').toString('utf-8').split('\n');
 const elves: number[] = [0];
 
 for (const calorieCount of data) {

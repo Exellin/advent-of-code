@@ -1,4 +1,4 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
 type BingoNumber = {
   x: number,
@@ -7,7 +7,7 @@ type BingoNumber = {
   value: string
 };
 
-const data = fs.readFileSync('day4/input.txt').toString('utf-8').split('\n');
+const data: string[] = readFileSync('day4/input.txt').toString('utf-8').split('\n');
 const drawnBingoNumbers = data.shift()?.split(',') || [];
 const bingoBoards: Array<BingoNumber[]> = [];
 const BOARD_SIZE = 5;

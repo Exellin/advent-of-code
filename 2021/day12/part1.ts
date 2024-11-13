@@ -1,6 +1,6 @@
-import fs from 'fs';
+import { readFileSync } from "node:fs";
 
-const connections = fs.readFileSync('day12/input.txt').toString('utf-8').split('\n').filter((line) => line.length > 0);
+const connections: string[] = readFileSync('day12/input.txt').toString('utf-8').split('\n').filter((line: string) => line.length > 0);
 const possiblePaths: string[][] = [];
 
 for (const connection of connections) {
